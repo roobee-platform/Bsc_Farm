@@ -1,0 +1,15 @@
+# Image neeeds to have ssh-client
+image: alpine:3.7
+
+stages:
+  - deploy
+
+deploy_dev:
+  stage: deploy
+  tags:
+    - deploy
+  only:
+    - develop-bsc
+  script:
+    - /home/gitlab-runner/gitlab-ci/lend/develop/lend.sh roobeeFarmBsc
+    

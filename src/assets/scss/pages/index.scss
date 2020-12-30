@@ -1,0 +1,60 @@
+.index-page {
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 90px;
+
+    &-logo {
+      width: 69px;
+      height: 72px;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -31px;
+        left: -35px;
+        width: 161px;
+        height: 166px;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      // mr
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 120%;
+      text-align: center;
+      color: #000000;
+    }
+  }
+
+  .balance__item {
+    &:last-of-type {
+      .balance__amount {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .index-page {
+    &__title {
+      flex-direction: column-reverse;
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      &-logo {
+        margin-bottom: 20px;
+
+        img {
+          left: -51px;
+        }
+      }
+    }
+  }
+}
